@@ -96,5 +96,5 @@ function animateSnowflakes() {
 
 // Navigate to another page when the button is clicked
 goToPageButton.addEventListener("click", () => {
-  window.location.href = "https://google.com";
+  window.location.href = "/form.html";
 });
