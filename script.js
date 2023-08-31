@@ -6,6 +6,8 @@ const isMobileDevice = window.innerWidth <= 768;
 
 if (!isMobileDevice) {
   videoPlayer.autoplay = true;
+  videoPlayer.ATTRIBUTE_NODE.removeAttribute("controls");
+} else {
   videoPlayer.controls = true;
 }
 
