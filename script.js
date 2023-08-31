@@ -14,7 +14,7 @@ if (!isMobileDevice) {
 }
 
 const snowflakeNumber = 25;
-const snowflakeDuration = 10000;
+const snowflakeDuration = 8000;
 
 function createSnowflake() {
   const snowflake = document.createElement("div");
@@ -48,7 +48,7 @@ function createSnowflake() {
 
 // Start snowfall animation after video ends
 videoPlayer.addEventListener("ended", () => {
-  goToPageButton.style.display = "block";
+  // goToPageButton.style.display = "block";
   snowContainer.style.background = "rgba(0, 0, 0, 0)";
 
   const snowflakeInterval = snowflakeDuration / snowflakeNumber;
@@ -69,6 +69,10 @@ videoPlayer.addEventListener("ended", () => {
   setTimeout(() => {
     animateSnowflakes();
   }, snowflakeDuration);
+
+  setTimeout(() => {
+    goToPageButton.style.display = "block";
+  }, 1500);
 });
 
 // Animation of falling snowflakes
