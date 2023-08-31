@@ -47,7 +47,7 @@ function createSnowflake() {
 // Start snowfall animation after video ends
 videoPlayer.addEventListener("ended", () => {
   goToPageButton.style.display = "block";
-  snowContainer.style.background = "rgba(0, 0, 0, 0.3)";
+  snowContainer.style.background = "rgba(0, 0, 0, 0)";
 
   const snowflakeInterval = snowflakeDuration / snowflakeNumber;
   let snowflakeCount = 0;
