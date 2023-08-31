@@ -10,9 +10,10 @@ if (!isMobileDevice) {
 } else {
   videoPlayer.autoplay = false;
   videoPlayer.controls = true; // Turn on controls on mobile
+  videoPlayer.removeAttribute("autoplay");
 }
 
-const snowflakeNumber = 20;
+const snowflakeNumber = 25;
 const snowflakeDuration = 10000;
 
 function createSnowflake() {
