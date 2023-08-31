@@ -6,6 +6,7 @@ const isMobileDevice = window.innerWidth <= 768;
 
 if (!isMobileDevice) {
   videoPlayer.autoplay = true;
+  videoPlayer.controls = true;
 }
 
 const snowflakeNumber = 20;
