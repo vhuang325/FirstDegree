@@ -2,6 +2,11 @@
 const videoPlayer = document.getElementById("videoPlayer");
 const goToPageButton = document.getElementById("goToPageButton");
 const snowContainer = document.getElementById("snowContainer");
+const isMobileDevice = window.innerWidth <= 768;
+
+if (!isMobileDevice) {
+  videoPlayer.autoplay = true;
+}
 
 const snowflakeNumber = 20;
 const snowflakeDuration = 10000;
