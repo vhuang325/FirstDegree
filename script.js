@@ -6,9 +6,10 @@ const isMobileDevice = window.innerWidth <= 768;
 
 if (!isMobileDevice) {
   videoPlayer.autoplay = true;
-  videoPlayer.removeAttribute("controls");
+  videoPlayer.controls = false; // Turn off controls on desktop
 } else {
-  videoPlayer.controls = true;
+  videoPlayer.autoplay = false;
+  videoPlayer.controls = true; // Turn on controls on mobile
 }
 
 const snowflakeNumber = 20;
